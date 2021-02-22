@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Browsers support chrome, chrome-headless, chrome-ng ,chrome-android-->
+<!-- Environments support dev, qa, prod -->
+ <suite name="RWS Automation Suite" parallel="tests" thread-count="2" verbose="1">
+	<parameter name="env" value="qa" />
+	<parameter name="browser" value="chrome-ng" />
+	<test name="Regression-1">
+		<classes>
+			<class name="suite.base.TestBase" />
+			<class name="suite.test.LoginTest" />
+		</classes>
+	</test>
+
+	<test name="Regression-2">
+		
+		<classes>
+			<class name="suite.base.TestBase" />
+			<class name="suite.test.LoginTest" />
+		</classes>
+	</test>
+</suite>
